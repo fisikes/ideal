@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Run from './components/Run'
+import AppRouter from './components/AppRouter'
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-     <Run></Run>
+     <AppRouter/>
     </>
   )
 }

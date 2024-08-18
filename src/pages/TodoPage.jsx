@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { request } from '../utils/request';
+import '../common/table.css'
+import '../common/card.css'
+
 
 const TodoPage = () => {
   const [data, setData] = useState([]);
@@ -10,8 +13,9 @@ const TodoPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const dataToSend = { key: 'value' };
-        const result = await request.post('/api/test-page', dataToSend);
+        const result = await request.post('/api/test-page', {
+          
+        });
         setData(result.data);
         setTotalPages(result.totalPages);
       } catch (error) {
@@ -27,12 +31,27 @@ const TodoPage = () => {
   };
 
   return (
-    <div>
-      <ul>
-        {data.map(item => (
-          <li key={item.id}>{item.title}</li>
-        ))}
-      </ul>
+    <div className='card'>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Create Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map(item => (
+            <tr key={item.id}>
+              <td>{item.title}</td>
+              <td>{item.description}</td>
+              <td>{item.status}</td>
+              <td>{item.createTime}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
       <div>
         <button disabled={currentPage === 1} onClick={() => handlePageChange(currentPage - 1)}>
           Previous

@@ -1,12 +1,14 @@
 import ClientPage from "../components/biz/ClientPage";
 import Home from "../components/biz/Home";
+import DiskMapping from "../components/dnd/DiskMapping";
+import DndDemo from "../pages/DndDemo";
 import TodoPage from "../pages/TodoPage";
 
 const routes = [
     { path: '/', name: 'Home', component: Home },
     { path: '/todoPage', name: 'TodoPage', component: TodoPage },
-    { path: '/client1', name: 'ClientPage1', component: ClientPage },
-    { path: '/client2', name: 'ClientPage2', component: ClientPage },
+    { path: '/dndDemo', name: 'dndDemo', component: DndDemo },
+    { path: '/diskMapping', name: 'disk mapping', component: DiskMapping },
     { path: '/client3', name: 'ClientPage3', component: ClientPage },
     { path: '/client4', name: 'ClientPage4', component: ClientPage },
     { path: '/client5', name: 'ClientPage5', component: ClientPage },

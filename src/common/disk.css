@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.disk-list {
+    width: 45%;
+    padding: 20px;
+    border: 2px solid #000;
+    background-color: #f7f7f7;
+}
+
+.disk-list h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.disk-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    cursor: pointer;
+}
